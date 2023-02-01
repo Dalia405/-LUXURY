@@ -1,0 +1,57 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    var isRTL = CultureInfo.CurrentCulture.Name.StartsWith("ar") ? "rtl" : "ltr";
+}
+
+<!-- BEGIN VENDOR CSS-->
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/css-@isRTL/vendors.css" />
+<link rel="stylesheet" 
+      type="text/css" 
+      href="~/Admin/app-assets/vendors/css/ui/prism.min.css">
+<link rel="stylesheet" 
+      type="text/css" 
+      href="~/Admin/app-assets/vendors/css/forms/selects/jquery.selectBoxIt.css">
+
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/vendors/css/forms/selects/select2.min.css">
+
+<link href="~/css/Bootstrap_v5/bootstrap.min.css" rel="stylesheet">
+<!-- END VENDOR CSS-->
+
+<!-- BEGIN MODERN CSS-->
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/css-@isRTL/app.css" />
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/fonts/simple-line-icons/style.css" />
+<!-- END MODERN CSS-->
+
+<!-- BEGIN Page Level CSS-->
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/css-@isRTL/core/menu/menu-types/vertical-menu-modern.css" />
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/css-@isRTL/core/colors/palette-gradient.css" />
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css" />
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/vendors/css/charts/morris.css" />
+<link rel="stylesheet"
+      type="text/css"
+      href="~/Admin/app-assets/css-@isRTL/plugins/forms/selectBoxIt/selectBoxIt.css">
+
+<link rel="stylesheet"
+      type="text/css"
+      href="~/css/calendar-range-selectdemo/css/mobiscroll.javascript.min.css">
+
+<!-- END Page Level CSS-->

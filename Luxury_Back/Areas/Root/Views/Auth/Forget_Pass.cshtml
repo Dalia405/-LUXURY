@@ -1,0 +1,44 @@
+﻿
+@model User;
+@{
+    var isRTL = CultureInfo.CurrentCulture.Name.StartsWith("ar") ? "rtl" : "ltr";
+}
+@{
+    ViewBag.title = localizer["forget_password"];
+    Layout = "~/Areas/Root/Views/Shared/LayoutLogin/_Layout_Login.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" type="text/css" href="~/Admin/app-assets/css-@isRTL/pages/login-register.css">
+    <style>
+     body {
+            background-color: #4DD0E1 !important;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+    </style >
+}
+    @section Scripts {
+    <script src="~/Admin/app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
+
+}
+
+<div class="card-content">
+    <div class="card-body pt-0">
+        <form class="form-horizontal" asp-action="Forget_Pass" asp-controller="Auth" method="post">
+            <fieldset class="form-group floating-label-form-group">
+                <label for="Email">@localizer["placeholdeemail"]</label>
+                <input type="text" class="form-control" id="Email" placeholder="@localizer["enter"] @localizer["placeholdeemail"]" asp-for="Email">
+                <span class="invalid-feedback d-block">
+                    @TempData["Email"]
+                </span>
+            </fieldset>
+            <button type="submit" class="btn btn-outline-info btn-block"><i class="ft-unlock"></i>@localizer["send"]</button>
+        </form>
+    </div> 
+</div>
+           

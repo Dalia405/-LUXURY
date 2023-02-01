@@ -1,0 +1,53 @@
+﻿@using Luxury_Back.Helpers
+<section class="component_siction py-1 _guests_love">
+    <div class="container">
+        <div class="row title_row my-4">
+            <h2 class="h2">
+                Homes guests love
+            </h2>
+        </div>
+        <div class="row content">
+            @if (ViewBag.recentCount > 0)
+            {
+                <div class="row recent_Ibookings">
+
+                    <div class="recent_items">
+                        <div class="owl-carousel owl-theme">
+                            @foreach (var item in ViewBag.recent)
+                            {
+
+                                <div class="col-md-12 recent_item p-0">
+                                    <div class="card">
+                                        <a asp-action="Show" asp-controller="IBooking" asp-route-id="@item.Id">
+                                            @if (item.images != null)
+                                            {
+                                                @foreach (var img in item.images)
+                                                {
+                                                    <img src="@(Helper.imageUrl(img.Name))" class="card-img-top" alt="@item.name_en">
+                                                }
+                                            }
+
+                                            <div class="card-body">
+                                                <h5 class="card-title">@(Helper.getLnag() == "ar" ? item.name_ar : item.name_en)</h5>
+                                                <p class="card-text"></p>
+                                                <p class="card-text">
+
+                                                </p>
+                                                <p class="card-text reviews">
+                                                    <span>0.@(Helper.RandomNum(7, 9))</span>
+                                                    <b>Very Good</b>
+                                                    <small>   </small>
+                                                    <small>@(Helper.RandomNum(200, 500)) reviews</small>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

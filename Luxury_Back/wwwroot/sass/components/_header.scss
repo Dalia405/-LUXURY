@@ -1,0 +1,130 @@
+﻿
+header {
+    background-image: url("https://content.r9cdn.net/rimg/dimg/85/e5/d763bad9-city-9087-164429be177.jpg?crop=true&width=1366&height=768&xhint=2760&yhint=1285");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 50px;
+    position: relative;
+    bottom: 70px;
+
+    nav {
+        &.header-navbar {
+            border-bottom: none !important;
+
+            &.fixed-top {
+                box-shadow: none;
+                background-color: transparent;
+
+                .navbar-brand {
+                    .brand-text {
+                        font-family: Pop;
+                        color: #003580 !important;
+                        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+                    }
+                }
+
+
+
+                .navbar-container {
+                    li {
+                        > * {
+                            padding: 1rem .1rem 1rem 1rem !important;
+                        }
+
+                        &.isAuth {
+                            &.dropdown-user {
+                                .avatar {
+                                    border-radius: 50%;
+                                    height: 35px;
+                                    margin: 0 auto;
+
+                                    i {
+                                        width: 35px;
+                                        height: 35px;
+                                        font-size: 2.4rem;
+                                        top: 5px;
+                                        text-align: center;
+                                    }
+                                }
+
+                                .dropdown-menu {
+                                    padding: 0.5rem 0.5rem !important;
+                                }
+                            }
+
+                            button {
+                                background-color: #fff;
+                                font-weight: 550;
+                                border-radius: 0;
+                                color: #0763e6;
+                                border-color: #0763e6;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+
+                &.onScroll {
+                    box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.17);
+                    background-color: #003580 !important;
+
+                    .navbar-brand {
+                        .brand-text {
+                            color: #fff !important;
+                            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.nav_bottom {
+            z-index: 1;
+
+            .nav-item {
+                .nav-link {
+                    color: #fff;
+                    font-weight: 550;
+                    font-family: Pop;
+                    border-radius: 20px;
+                    margin: 0 .5rem;
+                    padding: .5rem .75rem;
+                    text-shadow: 1px 1px 1px #222;
+                    box-shadow: -1px -1px 5px 4px #ffffff24;
+                    transition: all 1s ease-in-out;
+
+                    i {
+                        margin: auto;
+                        position: relative;
+                        top: 1px;
+                        font-size: 1.7rem;
+                    }
+                }
+
+                &.active {
+                    .nav-link {
+                        border: 1px solid #fff;
+                        background-color: #fff5;
+                    }
+                }
+
+                &:hover {
+                    .nav-link {
+                        background-color: #fff5;
+                    }
+                }
+            }
+        }
+        /*background-color: $bg-blue !important;*/
+    }
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background-color: rgba(17, 17, 17, 0.34);
+        z-index: 0;
+        height: 100%;
+    }
+}

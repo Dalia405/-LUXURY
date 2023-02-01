@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg bg-light bg-transparent">
+  <div class="container">
+    <a class="navbar-brand" href="/">Luxury</a>
+    <ul class="nav justify-content-end c-ms mb-2 mb-lg-0 gx-3">
+      <li class="nav-item mx-1 my-2">
+        <div class="user-list">
+          <button class="border-0 bg-transparent p-0" type="button">
+            <i class="bi bi-person-circle"></i>
+          </button>
+        </div>
+      </li>
+      <li class="nav-item mx-1">
+        <div class="lang dropdown">
+          <button class="border-0 bg-transparent p-0" type="button">
+            <img [src]="currentSrc" [alt]="currentLang" />
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button
+                (click)="changeCurrentLang(checkLang)"
+                class="dropdown-item"
+                href="#"
+              >
+                <img [src]="src" [alt]="checkLang" />
+                <span>{{ checkLang }}</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <button class="Rbtn mt-2" type="button" [translate]="'Rbtn'">
+          Register
+        </button>
+      </li>
+      <li>
+        <button class="Rbtn mt-2" type="button" [translate]="'Sbtn'">
+          Sign In
+        </button>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
+    </ul>
+    <!-- <app-nav-list
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+      ></app-nav-list> -->
+  </div>
+</nav>

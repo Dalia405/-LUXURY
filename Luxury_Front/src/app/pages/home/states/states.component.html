@@ -1,0 +1,19 @@
+<div class="container py-5">
+  <h4 [translate]="'ExpEgy'">Explore Egypt</h4>
+  <p [translate]="'ExpDes'">These popular destinations have a lot to offer</p>
+  <div class="cards">
+    <owl-carousel-o [options]="customOptions" #owlCar>
+      <ng-container *ngFor="let slide of slides">
+        <ng-template carouselSlide [id]="slide.img">
+          <img [src]="slide.img" />
+          <h4>{{ slide.htitle }}</h4>
+          <p>{{ slide.ptitle }}</p>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+    <p>
+      <a class="btn pevbtn" (click)="owlCar.prev()"><</a>
+      <a class="btn nextbtn" (click)="owlCar.next()">></a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+﻿.select-lang {
+    position: relative;
+    img {
+        width: 33px;
+    }
+
+    ul.dropdown-menu {
+        top: 65px;
+        max-width: min-content;
+        li{
+            cursor: pointer;
+        }
+    }
+}
+
+.auth-content{
+    .select-lang{
+        justify-content: end;
+        display: flex;
+        @include one_dir(justify-content, start);
+        .dropdown-menu{
+            @include one_dir(right, auto);
+            @include one_dir(left, -70px);
+        }
+    }
+}
+
+.component_siction {
+    margin: 1rem 0;
+    .title_row {
+        h2 {
+            text-transform: capitalize;
+            font-family: PopB;
+            margin-bottom: 1rem;
+            @include one_dir(font-family, CairoB);
+        }
+    }
+}
+
+.btn-primary {
+    background-color: #0d6efd !important;
+
+    &:hover {
+        background-color: #0d67ec !important;
+        border-color: #0a58ca;
+    }
+
+    color: #fff;
+}
+
+.mbsc-calendar-title-wrapper {
+    overflow: unset !important;
+}
+
+.avatar-online i{
+    background-color: transparent !important;
+}
+
+.recent_Ibookings {
+    .owl-item active {
+    }
+
+    .card {
+        border-radius: 0;
+        box-shadow: none;
+        @include one_dir(padding, 0 0.5rem);
+
+        img {
+            border-radius: 0;
+            height: 200px;
+        }
+
+        a {
+            color: #444;
+            text-decoration: none;
+            color: #222;
+        }
+
+        .card-body {
+            > a {
+                color: #444;
+                text-decoration: none;
+                color: #222;
+            }
+
+            .card-title {
+                font-weight: bold;
+                text-transform: capitalize;
+                font-family: OxyB;
+                font-size: .95rem;
+            }
+
+            .card-text {
+                font-weight: 550;
+                font-family: Oxy;
+                font-size: .9rem;
+
+                small {
+                    b {
+                        color: #333;
+                        text-decoration: underline;
+                    }
+                }
+
+                &.reviews {
+                    b {
+                        font-weight: bold;
+                        font-size: .9rem;
+                    }
+
+                    span {
+                        color: #fff;
+                        padding: 5px;
+                        width: 28px;
+                        height: 28px;
+                        background-color: #003580;
+                        border-radius: calc(4px*7/5.5) calc(4px*7/5.5) calc(4px*7/5.5) 0;
+                    }
+
+                    small {
+                        color: #555;
+
+                        &:last-of-type {
+                            display: block;
+                            margin-top: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

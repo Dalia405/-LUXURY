@@ -1,0 +1,28 @@
+﻿@using Luxury_Back.Helpers
+<section class="component_siction py-1">
+    <div class="container mb-5 topvisit">
+        <div class="row mt-2">
+            @{
+                int i = 0;
+            }
+            @foreach (var gov in ViewBag.topGovernorates)
+            {
+                <div class="col-lg-@(i==0||i==1?6:4) my-2">
+                    <a asp-action="FiterGov" asp-controller="filter" asp-route-govId="@gov.Id">
+                        <div class="imgcontainer">
+                            <img src="@(Helper.imageUrl(gov.image))"
+                                 alt=""
+                                 width="100"
+                                 class="img-fluid w-100" />
+                            <h2 class="cairo">
+                                @gov.name
+                                <img src="/images/home/vicon.png" alt="" />
+                            </h2>
+                        </div>
+                    </a>
+                </div>
+                i++;
+            }
+        </div>
+    </div>
+</section>

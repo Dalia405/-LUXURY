@@ -1,0 +1,17 @@
+﻿@import "fonts";
+@import "variables";
+@import "mTags";
+@import "mClass";
+@import "mStyle";
+
+//SHARED
+@import "components/_shared/top_search";
+
+//COMPONENTS
+@import "components/_header.scss";
+@import "components/_footer.scss";
+
+//PAGES
+@import "components/_home/home";
+@import "components/_iBooking/iBooking";
+@import "components/_filter/filter";

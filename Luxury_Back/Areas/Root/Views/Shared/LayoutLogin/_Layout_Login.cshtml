@@ -1,0 +1,68 @@
+﻿@{
+    var isRTL = CultureInfo.CurrentCulture.Name.StartsWith("ar") ? "rtl" : "ltr";
+}
+<!DOCTYPE html>
+<html class="loading" lang="en" dir="@isRTL">
+
+<head>
+    <partial name="../Panel/_Head.cshtml" />
+    @RenderSection("Head", required: false)
+    @*START PANEL STAYLE LINKS*@
+    <partial name="../Panel/_Style.cshtml" />
+    <!-- BEGIN Custom CSS-->
+    @RenderSection("Styles", required: false)
+    <!-- END Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="~/css/root.css" />
+    @if (isRTL == "rtl")
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/root.css" />
+    }
+</head>
+
+<body class="vertical-layout vertical-menu-modern 1-column   menu-expanded blank-page blank-page" data-open="click"
+    data-menu="vertical-menu-modern" data-col="1-column">
+
+    <div class="app-content content py-5">
+        <div class="content-wrapper">
+            
+            <div class="content-header row">
+            </div>
+            <div class="content-body auth-content">
+                @*START PAGE CONTENT*@
+                <section class="flexbox-container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-md-4 col-10 box-shadow-2 p-0">
+                            <div class="card border-grey border-lighten-3 p-2 m-0">
+                                <partial name="_SelectLanguage" />
+                                
+                                <div class="card-header border-0">
+                                    <div class="card-title text-center">
+
+                                        <div class="p-1">
+                                            <img src="~/images/logo/booking_logo.png" alt="branding logo" class="avatar">
+                                        </div>
+                                    </div>
+
+                                    <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
+                                        <span>@ViewBag.title</span>
+                                    </h6>
+                                </div>
+                                <partial class="mt-1" name="../Panel/_TempMesages.cshtml" />
+                                 @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <partial name="../Panel/_Script.cshtml" />
+
+    <!-- BEGIN PAGE LEVEL JS-->
+    @RenderSection("Scripts", required: false)
+    <!-- END PAGE LEVEL JS-->
+    <script src="~/js/root.js"></script>
+</body>
+
+</html>
